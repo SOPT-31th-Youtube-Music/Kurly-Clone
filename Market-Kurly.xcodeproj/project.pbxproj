@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D67703BC2933A77200031959 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67703BB2933A77200031959 /* TabBarViewController.swift */; };
 		D6959C272933A68200FDAB1F /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D6959C262933A68200FDAB1F /* Then */; };
 		D6959C2A2933A69000FDAB1F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D6959C292933A69000FDAB1F /* SnapKit */; };
 		D6A74ABF2933594B0015C5FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A74ABE2933594B0015C5FE /* AppDelegate.swift */; };
@@ -19,9 +20,12 @@
 		D6A74AE229335A7A0015C5FE /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A74AE129335A7A0015C5FE /* String.swift */; };
 		D6A74AE7293367720015C5FE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A74AE6293367720015C5FE /* SearchViewController.swift */; };
 		D6A74AE92933677A0015C5FE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A74AE82933677A0015C5FE /* HomeViewController.swift */; };
+		D6D03EB929346C4E00E2B986 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D03EB829346C4E00E2B986 /* MenuViewController.swift */; };
+		D6D03EBB29346C5600E2B986 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D03EBA29346C5600E2B986 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D67703BB2933A77200031959 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		D6A74ABB2933594B0015C5FE /* Market-Kurly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Market-Kurly.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A74ABE2933594B0015C5FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6A74AC02933594B0015C5FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +38,8 @@
 		D6A74AE129335A7A0015C5FE /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		D6A74AE6293367720015C5FE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D6A74AE82933677A0015C5FE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D6D03EB829346C4E00E2B986 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		D6D03EBA29346C5600E2B986 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D67703BA2933A75300031959 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D67703BB2933A77200031959 /* TabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		D6A74AB22933594B0015C5FE = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +122,9 @@
 		D6A74AD5293359FC0015C5FE /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				D6D03EB729346C3B00E2B986 /* Profile */,
+				D6D03EB629346C3200E2B986 /* Menu */,
+				D67703BA2933A75300031959 /* TabBar */,
 				D6A74AE429335B080015C5FE /* Search */,
 				D6A74AE329335B010015C5FE /* Home */,
 			);
@@ -169,6 +186,22 @@
 			children = (
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		D6D03EB629346C3200E2B986 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				D6D03EB829346C4E00E2B986 /* MenuViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		D6D03EB729346C3B00E2B986 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D6D03EBA29346C5600E2B986 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,9 +283,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6A74ADC29335A400015C5FE /* UIFont+.swift in Sources */,
+				D6D03EB929346C4E00E2B986 /* MenuViewController.swift in Sources */,
 				D6A74AE029335A570015C5FE /* UIColor+.swift in Sources */,
 				D6A74AE7293367720015C5FE /* SearchViewController.swift in Sources */,
 				D6A74ABF2933594B0015C5FE /* AppDelegate.swift in Sources */,
+				D67703BC2933A77200031959 /* TabBarViewController.swift in Sources */,
+				D6D03EBB29346C5600E2B986 /* ProfileViewController.swift in Sources */,
 				D6A74AE92933677A0015C5FE /* HomeViewController.swift in Sources */,
 				D6A74AE229335A7A0015C5FE /* String.swift in Sources */,
 				D6A74AC12933594B0015C5FE /* SceneDelegate.swift in Sources */,
