@@ -7,17 +7,6 @@
 
 import UIKit
 
-class KurlyTabBar: UITabBar {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        clipsToBounds = true
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemeted")
-    }
-}
-
 class TabBarViewController: UITabBarController {
     
     var index = 0 {
@@ -26,17 +15,12 @@ class TabBarViewController: UITabBarController {
         }
     }
     
-    private let kurlyTabBar: KurlyTabBar = KurlyTabBar()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // setUI
         self.view.backgroundColor = .white
         self.selectedIndex = index
-        self.setValue(kurlyTabBar, forKey: "tabBar")
-        object_setClass(self.tabBar, KurlyTabBar.self)
-        self.tabBar.itemPositioning = .centered
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,33 +45,24 @@ class TabBarViewController: UITabBarController {
             profileViewNavigationController
         ]
         
-        self.setViewControllers(viewControllers, animated: true)
+        viewControllers.forEach {
+            $0.navigationBar.isHidden = true
+        }
         
-        let tabBar: UITabBar = self.tabBar
-        tabBar.backgroundColor = .white
-        tabBar.barStyle = UIBarStyle.default
-        tabBar.barTintColor = .white
+        self.setViewControllers(viewControllers, animated: false)
         
         let imageNames = [
-            "home",
-            "menu",
-            "magnifier",
-            "user"
-        ]
-        
-        let imageSelectedNames = [
-            "home",
-            "menu",
-            "magnifier",
-            "user"
+            "house",
+            "line.3.horizontal",
+            "magnifyingglass",
+            "person"
         ]
         
         for (index, value) in (tabBar.items?.enumerated())! {
             let tabBarItem: UITabBarItem = value as UITabBarItem
             
-            tabBarItem.image = UIImage(named: imageNames[index])?.withRenderingMode(.alwaysOriginal)
-            tabBarItem.selectedImage = UIImage(named: imageSelectedNames[index])?.withRenderingMode(.alwaysOriginal)
-            tabBarItem.accessibilityIdentifier = imageNames[index]
+            tabBarItem.image = UIImage(systemName:  imageNames[index])?.withRenderingMode(.alwaysOriginal)
+            tabBarItem.selectedImage = tabBarItem.image?.withTintColor(.mainColor)
         }
     }
 }
